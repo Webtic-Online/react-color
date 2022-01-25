@@ -17,8 +17,7 @@ export const CircleSwatch = ({ color, onClick, onSwatchHover, hover, active,
       },
       Swatch: {
         borderRadius: '50%',
-        background: 'transparent',
-        boxShadow: `inset 0 0 0 ${ (circleSize / 2) + 1 }px ${ color }`,
+        background: `linear-gradient(90deg, ${ color.color } 50%, ${ color.colorSecondary } 50%)`,
         transition: '100ms box-shadow ease',
       },
     },
@@ -29,7 +28,7 @@ export const CircleSwatch = ({ color, onClick, onSwatchHover, hover, active,
     },
     'active': {
       Swatch: {
-        boxShadow: `inset 0 0 0 3px ${ color }`,
+        border: "2px solid #00000099"
       },
     },
   }, { hover, active })
@@ -38,10 +37,10 @@ export const CircleSwatch = ({ color, onClick, onSwatchHover, hover, active,
     <div style={ styles.swatch }>
       <Swatch
         style={ styles.Swatch }
-        color={ color }
+        color={ color.color }
         onClick={ onClick }
         onHover={ onSwatchHover }
-        focusStyle={{ boxShadow: `${ styles.Swatch.boxShadow }, 0 0 5px ${ color }` }}
+        focusStyle={{ border: `black 0 0 0 2px inset` }}
       />
     </div>
   )
