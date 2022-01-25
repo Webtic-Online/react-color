@@ -28,7 +28,7 @@ export const CircleSwatch = ({ color, onClick, onSwatchHover, hover, active,
     },
     'active': {
       Swatch: {
-        border: "2px solid #00000099"
+        border:  `black 0 0 0 2px inset`
       },
     },
   }, { hover, active })
