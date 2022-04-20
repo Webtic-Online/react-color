@@ -41,7 +41,7 @@ export const CircleSwatch = ({ color, onClick, onSwatchHover, hover, active,
         onClick={ onClick }
         onHover={ onSwatchHover }
         focusStyle={{ border: `black 0 0 0 2px inset` }}
-        title={ color.title ?? color.color }
+        title={ color.title ? color.title : color.color }
       />
     </div>
   )
