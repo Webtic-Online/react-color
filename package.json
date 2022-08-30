@@ -17,7 +17,6 @@
     "test": "npm run jest && npm run eslint",
     "jest": "jest",
     "eslint": "eslint src/**/*.js",
-    "prepare": "npm run lib && npm run es",
     "lib": "npm run clean-lib && npx babel-cli src -d lib",
     "es": "npm run clean-es && node scripts/use-module-babelrc.js && npx babel-cli src -d es && node scripts/restore-original-babelrc.js",
     "clean-lib": "echo ok",
